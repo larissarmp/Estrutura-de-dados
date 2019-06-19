@@ -1,0 +1,122 @@
+#include "stdafx.h"
+#include <stdio.h>
+#define MANX 10
+typedef long Tchave;
+typedef struct TRegistro{
+	Tchave Chave;
+}TRegistro;
+typedef int TIndice;
+typedef struct TTabela {
+	TRegistro array[MANX+1];
+	TIndice n;
+}TTabela;
+void Inicio(TTabela *T)
+{
+	T->n = 0;
+}
+void Insere(TRegistro Reg, TTabela *T)
+{
+	if (T->n == MANX)
+		printf_s("Erro : tabela cheia\n");
+	else
+	{
+		T->n++;
+		T->array[T->n] = Reg;
+	}
+}
+
+TIndice Binaria(Tchave x, TTabela *T)
+{
+	TIndice i;
+	
+	if (T->n == 0)
+		return 0;
+
+		int Esquer = 1;
+		int Direit = T->n;
+		do{
+			i = (Esquer + Direit) / 2;
+			if (x > T->array[i].Chave)
+				Esquer = i + 1;
+			else Direit = i - 1;
+		} while (x != T->array[i].Chave && Esquer <= Direit);
+		if (x == T->array[i].Chave) return i; else return 0;
+		
+}
+int _tmain(int argc, _TCHAR* argv[])
+{
+	TTabela T;
+	TRegistro reg;
+	Tchave vetor[MANX + 1];
+	TIndice pos;
+	int  i;
+
+	Inicio(&T);
+
+	/* Insere as chaves ordenas tabela */
+	for (i = 1; i <= MANX; i++)
+	{
+		vetor[i] = i;
+		reg.Chave = vetor[i];
+		Insere(reg, &T);
+		printf_s("Inseriu: %ld\n", vetor[i]);
+	}
+
+	/* Pesquisa Binaria em cada chave */
+	printf("Pesquisa Binaria (chaves ordenadas)\n");
+	for (i = 1; i <= MANX; i++) {
+		pos = Binaria(i, &T);
+		if (pos == 0)
+		{
+			printf_s("Pesquisa Falhou\n");
+			return 0;
+		}
+		printf_s("Registro %d na posicao: %d\n", i, pos);
+	}
+	return 0;
+}
+------------------------------------------------------------------------------------------------
+//Pesquisa sequencial
+
+
+#include "stdafx.h"
+ #include<stdio.h>
+int vetor[10];
+int busca;
+int achou = 0;
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+
+
+	
+		for (int i = 0; i<10; i++)
+		{
+			printf("Digite um numero");
+			scanf_s("%i", &vetor[i]);
+		}
+
+		printf("Informe o numero que deseja buscar");
+		scanf_s("%i", &busca);
+
+		for (int i = 0; i<10; i++)
+		{
+			if (vetor[i] == busca)
+			{
+				achou = 1;
+			}
+		}
+
+		if (achou == 1)
+		{
+			printf_s("Achou a chave");
+
+		}
+		else
+		{
+			printf_s("Não achou a chave");
+		}
+	return 1;
+	
+}
+

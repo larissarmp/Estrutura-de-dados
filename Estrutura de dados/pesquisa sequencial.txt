@@ -1,0 +1,40 @@
+#include "stdafx.h"
+ #include<stdio.h>
+int vetor[10];
+int busca;
+int achou = 0;
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+
+
+	
+		for (int i = 0; i<10; i++)
+		{
+			printf("Digite um numero");
+			scanf_s("%i", &vetor[i]);
+		}
+
+		printf("Informe o numero que deseja buscar");
+		scanf_s("%i", &busca);
+
+		for (int i = 0; i<10; i++)
+		{
+			if (vetor[i] == busca)
+			{
+				achou = 1;
+			}
+		}
+
+		if (achou == 1)
+		{
+			printf_s("Achou a chave");
+
+		}
+		else
+		{
+			printf_s("Não achou a chave");
+		}
+	return 1;
+	
+}
