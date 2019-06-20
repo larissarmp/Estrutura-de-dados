@@ -1,0 +1,17 @@
+﻿Build started 22/06/2014 14:13:06.
+     1>Project "c:\Users\Larissa\documents\visual studio 2013\Projects\ArvoreAVL\ArvoreAVL\ArvoreAVL.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\ArvoreAVL.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ArvoreAVL.cpp
+         ArvoreAVL.cpp
+     1>c:\users\larissa\documents\visual studio 2013\projects\arvoreavl\arvoreavl\arvoreavl.cpp(80): warning C4101: 'pnovo' : unreferenced local variable
+     1>c:\users\larissa\documents\visual studio 2013\projects\arvoreavl\arvoreavl\arvoreavl.cpp(102): warning C4101: 'pnovo' : unreferenced local variable
+     1>c:\users\larissa\documents\visual studio 2013\projects\arvoreavl\arvoreavl\arvoreavl.cpp(126): warning C4101: 'pQ' : unreferenced local variable
+     1>c:\users\larissa\documents\visual studio 2013\projects\arvoreavl\arvoreavl\arvoreavl.cpp(127): warning C4101: 'poschave' : unreferenced local variable
+     1>c:\users\larissa\documents\visual studio 2013\projects\arvoreavl\arvoreavl\arvoreavl.cpp(179): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(283) : see declaration of 'scanf'
+     1>c:\users\larissa\documents\visual studio 2013\projects\arvoreavl\arvoreavl\arvoreavl.cpp(184): error C3861: '_InsereAVL': identifier not found
+     1>Done Building Project "c:\Users\Larissa\documents\visual studio 2013\Projects\ArvoreAVL\ArvoreAVL\ArvoreAVL.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.25
